@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmpayment">
+    <name>Robokassa</name>
+    <creationDate>December 05 2018</creationDate>
+    <author>Pimentos</author>
+    <authorUrl>https://www.robokassa.ru</authorUrl>
+    <copyright>Copyright (C) 2018 Robokassa. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0</version>
+    <description><![CDATA[<a href="https://www.robokassa.ru" target="_blank">Robokassa</a> – service to arrange payments on the website, in the on-line shop, in social networks. Accepting payments with the lowest commissions. ]]>
+    </description>
+    <files>
+        <filename plugin="robokassa">robokassa.php</filename>
+        <folder>language</folder>
+    </files>
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/fields">
+
+                <!-- MAIN SETTINGS -->
+                <field type="vmtitle" default="VMPAYMENT_ROBOKASSA_ACCOUNT_PARAMS"/>
+                <field type="text" required="true" name="login" size="50"
+                  label="VMPAYMENT_ROBOKASSA_LOGIN" default=""
+                  description="VMPAYMENT_ROBOKASSA_LOGIN_DESCRIPTION"/>
+                <field type="text" required="true" name="password1_test" size="50"
+                       label="VMPAYMENT_ROBOKASSA_PASSWORD1_TEST" default=""
+                       description="VMPAYMENT_ROBOKASSA_PASSWORD1_TEST_DESCRIPTION"/>
+                <field type="text" required="true" name="password2_test" size="50"
+                       label="VMPAYMENT_ROBOKASSA_PASSWORD2_TEST" default=""
+                       description="VMPAYMENT_ROBOKASSA_PASSWORD2_TEST_DESCRIPTION"/>
+                <field type="text" required="true" name="password1" size="50"
+                  label="VMPAYMENT_ROBOKASSA_PASSWORD1" default=""
+                  description="VMPAYMENT_ROBOKASSA_PASSWORD1_DESCRIPTION"/>
+                <field type="text" required="true" name="password2" size="50"
+                  label="VMPAYMENT_ROBOKASSA_PASSWORD2" default=""
+                  description="VMPAYMENT_ROBOKASSA_PASSWORD2_DESCRIPTION"/>
+                <field name="fiscalization_type" type="list"
+                  label="VMPAYMENT_ROBOKASSA_FISCALIZATION_TYPE"
+                       description="VMPAYMENT_ROBOKASSA_FISCALIZATION_TYPE_TIP">
+                    <option value="0">VMPAYMENT_ROBOKASSA_LOYAL</option>
+                    <option value="1">VMPAYMENT_ROBOKASSA_CLOUDY</option> 
+                </field>
+                <field name="sno" type="list"
+                  label="VMPAYMENT_ROBOKASSA_SNO"
+                       description="VMPAYMENT_ROBOKASSA_SNO_TIP">
+                    <option value="osn">VMPAYMENT_ROBOKASSA_SNO_OSN</option>
+                    <option value="usn_income">VMPAYMENT_ROBOKASSA_SNO_USN</option> 
+                    <option value="usn_income_outcome">
+                      VMPAYMENT_ROBOKASSA_SNO_USN_OUT</option> 
+                    <option value="envd">VMPAYMENT_ROBOKASSA_SNO_ENVD</option> 
+                    <option value="esn">VMPAYMENT_ROBOKASSA_SNO_ESN</option> 
+                    <option value="patent">VMPAYMENT_ROBOKASSA_SNO_PATENT</option> 
+                </field>
+                <field name="tax" type="list"
+                  label="VMPAYMENT_ROBOKASSA_TAX" description="VMPAYMENT_ROBOKASSA_TAX_TIP">
+                    <option value="none">VMPAYMENT_ROBOKASSA_NONE</option>
+                    <option value="vat0">VMPAYMENT_ROBOKASSA_VAT0</option> 
+                    <option value="vat10">VMPAYMENT_ROBOKASSA_VAT10</option> 
+                    <option value="vat18">VMPAYMENT_ROBOKASSA_VAT18</option> 
+                    <option value="vat110">VMPAYMENT_ROBOKASSA_VAT110</option>
+                    <option value="vat118">VMPAYMENT_ROBOKASSA_VAT118</option>
+                    <option value="vat118">VMPAYMENT_ROBOKASSA_VAT20</option>
+                    <option value="vat118">VMPAYMENT_ROBOKASSA_VAT120</option>
+                </field>
+                <field class="" name="sandbox" type="radio" default="1" label="VMPAYMENT_ROBOKASSA_SHOP_MODE"
+                       description="VMPAYMENT_ROBOKASSA_SHOP_MODE_DESC">
+                    <option value="0">VMPAYMENT_ROBOKASSA_PRODUCTION</option>
+                    <option value="1">VMPAYMENT_ROBOKASSA_SANDBOX</option>
+                </field>
+
+                <!-- ORDER STATUSES -->
+                <field type="vmtitle" default="VMPAYMENT_ROBOKASSA_ORDER_STATUS_SECTION"
+                       description="VMPAYMENT_ROBOKASSA_STATUS_SECTION_DESC"/>
+                <field name="status_pending" type="vmorderstate" scope="com_virtuemart"
+                  default="U" label="VMPAYMENT_ROBOKASSA_STATUS_PENDING"
+                  description="VMPAYMENT_ROBOKASSA_STATUS_PENDING_TIP"/>
+                <field name="status_success" type="vmorderstate" scope="com_virtuemart"
+                  default="C" label="VMPAYMENT_ROBOKASSA_STATUS_SUCCESS"
+                  description="VMPAYMENT_ROBOKASSA_STATUS_SUCCESS_TIP"/>
+                <field type="vmorderstate" name="status_canceled" default="C"
+                  description="VMPAYMENT_ROBOKASSA_STATUS_CANCELED_TIP"
+                  label="VMPAYMENT_ROBOKASSA_STATUS_CANCELED" scope="com_virtuemart"/>
+                
+                <!-- DEBUG -->
+                <field type="vmtitle" default="VMPAYMENT_ROBOKASSA_DEBUG_SECTION"
+                       description="VMPAYMENT_ROBOKASSA_DEBUG_SECTION_DESC"/>
+                <field name="debug" type="radio" default="0"
+                  label="VMPAYMENT_ROBOKASSA_DEBUG_SECTION">
+                    <option value="0">COM_VIRTUEMART_NO</option>
+                    <option value="1">COM_VIRTUEMART_YES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>
