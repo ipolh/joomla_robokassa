@@ -51,6 +51,74 @@
                     <option value="esn">VMPAYMENT_ROBOKASSA_SNO_ESN</option> 
                     <option value="patent">VMPAYMENT_ROBOKASSA_SNO_PATENT</option> 
                 </field>
+                <field name="payment_method" type="list"
+                  label="VMPAYMENT_ROBOKASSA_PAYMENT_METHOD"
+                       description="VMPAYMENT_ROBOKASSA_PAYMENT_METHOD_TIP">
+                    <option value="full_prepayment">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_METHOD_FPR
+                    </option>
+                    <option value="prepayment">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_METHOD_P
+                    </option>
+                    <option value="advance">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_METHOD_A
+                    </option>
+                    <option value="full_payment">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_METHOD_FP
+                    </option> 
+                    <option value="partial_payment">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_METHOD_PP
+                    </option> 
+                    <option value="credit">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_METHOD_C
+                    </option> 
+                    <option value="credit_payment">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_METHOD_CP
+                    </option>
+                </field>
+                <field name="payment_object" type="list"
+                  label="VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT"
+                       description="VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_TIP">
+                    <option value="commodity">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_C
+                    </option>
+                    <option value="excise">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_E
+                    </option> 
+                    <option value="job">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_J
+                    </option> 
+                    <option value="service">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_S
+                    </option> 
+                    <option value="gambling_bet">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_GB
+                    </option>
+                    <option value="gambling_prize">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_GP
+                    </option>
+                    <option value="lottery">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_L
+                    </option>
+                    <option value="lottery_prize">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_LP
+                    </option>
+                    <option value="intellectual_activity">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_IA
+                    </option>
+                    <option value="payment">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_P
+                    </option>
+                    <option value="agent_commission">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_AC
+                    </option>
+                    <option value="composite">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_COM
+                    </option>
+                    <option value="another">
+                      VMPAYMENT_ROBOKASSA_PAYMENT_OBJECT_A
+                    </option>
+                </field>
                 <field name="tax" type="list"
                   label="VMPAYMENT_ROBOKASSA_TAX" description="VMPAYMENT_ROBOKASSA_TAX_TIP">
                     <option value="none">VMPAYMENT_ROBOKASSA_NONE</option>

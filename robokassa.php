@@ -34,6 +34,8 @@ class plgVmPaymentRobokassa extends vmPSPlugin {
             'password1' => array('', 'char'),
             'password2' => array('', 'char'),
             'fiscalization_type' => array('', 'int'),
+            'payment_method' => array('', 'char'),
+            'payment_object' => array('', 'char'),
             'tax' => array('', 'char'),
             'sno' => array('', 'char'),
             'sandbox' => array('', 'int'),
@@ -191,8 +193,8 @@ class plgVmPaymentRobokassa extends vmPSPlugin {
                     'name' => mb_strcut($item->order_item_name, 0, 63),
                     'quantity' => round($item->product_quantity, 2),
                     'sum' => round($item->product_subtotal_with_tax, 2),
-                    'payment_method' => 'full_payment',
-                    'payment_object' => 'commodity',
+                    'payment_method' => $method->payment_method,
+                    'payment_object' => $method->payment_object,
                     'tax' => $method->tax
                 );
             }
@@ -211,8 +213,8 @@ class plgVmPaymentRobokassa extends vmPSPlugin {
                         'name' => 'Shipment',
                         'quantity' => 1,
                         'sum' => round($shipment_cost, 2),
-                        'payment_method' => 'full_payment',
-                        'payment_object' => 'service',
+                        'payment_method' => $method->payment_method,
+                        'payment_object' => $method->payment_object,
                         'tax' => $method->tax
                     );
                 }
