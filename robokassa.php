@@ -232,8 +232,8 @@ class plgVmPaymentRobokassa extends vmPSPlugin {
             $send['IsTest'] = 1;
         }
 
-        $html = '<form id="robokassa" style="display:none;"'.
-            'action="https://merchant.roboxchange.com/Index.aspx" '.
+        $html = '<form id="robokassa" style="display:none;" '.
+            'action="https://auth.robokassa.ru/Merchant/Index.aspx" '.
             'method="POST">';
         foreach ($send as $key => $value) {
             $html .= '<input type="hidden" name="'.$key.'" value=\''.$value.'\'>';
