@@ -1,2 +1,1 @@
-Данный репозиторий не актуален, перейдите по ссылке ниже
-https://github.com/robokassa/cms-joomla
+Данный репозиторий больше не поддерживается, перейдите по ссылке на актиальный https://github.com/robokassa/cms-joomla
